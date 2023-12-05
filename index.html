@@ -84,11 +84,10 @@
   <body>
     <nav>
       <a href="#ab">Abstract</a>
-      <a href="#in">Intro</a>
+      <a href="#in">Introduction</a>
       <a href="#oad">Objective</a>
       <a href="#data">Dataset</a>
       <a href="#met">Methodology</a>
-      <a href="#imp">Implementation</a>
       <a href="#res">Results</a>
     </nav>
 
@@ -113,24 +112,6 @@ Though there have been a number of breakthroughs in recent years regarding cance
 
 	<p style="text-align: center">
 Machine learning models are able to recognize patterns in data that would not have been discoverable with the simple naked eye. They can then use this large amount of data to make predictions. Features refer to the columns in a dataset, or the categories of data of a sample. Though all of the features are considered when training a machine learning model, some contribute to the model in different strengths. Therefore by determining the feature importance of each feature in these genetic datasets, potential biomarkers for each  cancer are revealed. These feature importances were determined using SHAP values, an explainable AI approach to feature importance [28]. These values are calculated using a game theory technique that calculates the contribution of each feature to the final prediction. This technique is particularly valuable in that it is model-agnostic [28], meaning that it can be used to interpret any machine learning model, regardless of the type. Though many models are black-box, SHAP is able to give insight into what is actually going on behind the scenes.       </p>
-
-	<p style="text-align: center">
-In order to properly explain all biological elements included, the introduction will be approached in a basic to detailed manner. This ensures that the reader, regardless of familiarity with the subject, will have learned something of value. First, the basic components of genetic material will be overviewed. Next, the types of genetic material used in this study will be described. Then, the types of cancer will be outlined. Finally, the aims, motivation, and significance of the work will be discussed.      </p>
-
-	<p style="text-align: center">
-To begin, some of the most basic components of genetics include nucleic acids named DNA and RNA. DNA is a molecule found in the nucleus of most cells that contains the genetic information for all of an organism’s functioning. A gene is a specific sequence of DNA that holds instructions to make some sort of molecule, whether that is a specific protein or an RNA molecule. RNA is another component that is quite essential for most biological functions. The process of producing a strand of RNA from DNA is called transcription. This RNA is either able to perform a certain function itself or forms instructions for the development of proteins, which is called translation. When an RNA molecule has instructions that do not strictly create proteins, the RNA would be called non-coding RNA. This sequence of events where DNA is transcribed to RNA and RNA creates protein is an integral part of biology called The Central Dogma.
-      </p>
-	<p style="text-align: center">
-For the purpose of the study, a type of non-coding RNA called miRNA was used for analysis. These are small RNA that can alter gene expression, or the extent to which DNA is represented throughout the body, which will be discussed more thoroughly in a subsequent paragraph. For the RNA that do help create proteins, they would have the title of messenger RNA (mRNA), as it carries the message of how to manufacture proteins. This process is called translation. Proteins are especially important because they help facilitate cellular functions that regulate the human body’s tissues and organs. Though there are other types of RNA, the ones that are most important to this study’s data types have already been discussed or fall under one of the two categories. 
-      </p>
-	    
-	<p style="text-align: center">
-Copy number alterations (CNAs) occur when the number of genes are altered in some way in a genome, which can result in adverse effects on cellular functioning [6]. Copy number duplication is when a gene or a part of a gene is repeated and the copy number is increased, while copy number deletion is when a gene or a part of a gene is removed and the copy number is decreased. When a gene’s copy number is altered, the way that the gene is expressed is also changed. It can change when, where, and in what quantity proteins are expressed.
-	</p>
-
-	<p style="text-align: center">
-Gene expression refers to the way that the products of genetic information are converted into a protein that carries out a certain function in the body [9]. These are especially important in cancer, as over expressions and under expressions could result in specific genes being promoted and inhibited. A specific type of RNA, called miRNA, acts as oncogenes or tumor suppressor genes when they block mRNA from creating proteins by binding to them [4]. When oncogenes are promoted, cancer cells are encouraged to continue growing throughout the body. Additionally, when there are tumor suppressor genes that are inhibited, the body has no defense against the growth of a tumor, thus resulting in uninhibited cancer cell growth. This can cause several complications in functions at the cellular level or, depending on the scale of the growth, across tissues and organs. For this reason, finding the specific genes that control these processes becomes especially important to successfully predict and hopefully prevent cancer. 
-	</p>
 
 	<p style="text-align: center">
 Cervical cancer (CESC) and endometrial uterine cancer (UCEC) are two cancers that negatively impact the lives of women across the globe. As with most cancers, a diagnosis such as this results in a complete upheaval of one’s life. From surgery, to radiation, to even chemotherapy, the detriment to a person’s well-being is impossible to deny. In the US alone, there were 11542 new cases of cervical cancer and 4272 deaths from 2016 to 2020. Within that same time frame, 54744 people were diagnosed with and 11995 died of uterine cancer. Learning more information about cancers affecting the female reproductive system could lead to a mitigation of death by early detection or total prevention via biomarkers. Because these cancers have high rates of metastasis — the spreading of cancer to another part of the body — with each other due to proximity, they were chosen as the subjects of study for this experiment. 	</p>
@@ -204,27 +185,22 @@ By looking at the boxplots, it was clear to see the underperforming algorithms. 
 		
       <p style="text-align: center">
 Because of the variation in accuracies in the GISTIC and miRNA datasets, only the top performer was chosen to be analyzed for feature importance for the remainder of the study. On the other hand, because of the consistency in accuracy for the HtSeq and Combined datasets, it was determined that the feature importance would be decided by taking the average feature importance values for all of the classification algorithms.       </p>
-		
-      <p style="text-align: center">
-        <img src="res1.png"alt="res 1" />
-      </p>
-      <p style="text-align: center">asdfasdf</p>
-      <p style="text-align: center">
-        <img src="res2.png" width="800"  alt="res2" />
-      </p>
-      <p style="text-align: center">asdfadsf
-      </p>
-      <p style="text-align: center">
-        <img src="res3.png" width="800"  alt="res3" />
-      </p>
 
      
 
       <h2 id="res" style="text-align: center">Conclusions</h2>
-      <p style="text-align: center">
-       conclusion
-      </p>
+
+<p style="text-align: center">
+Though there were several genes that were found as influential in the study, how does one decide which ones are actually impacting the cancers? It first starts with the evaluation. As displayed in the results, the accuracies for the GISTIC dataset were far from perfect and very clearly underperformed despite all of the cautions taken in order to minimize overfitting. Therefore, it would be improper to assume that the feature importances discovered from this dataset actually reflect the copy number alteration data in cancer patients. Though it is not ideal to have to ignore a full dataset, it is unlikely that there is valuable information to be gathered in that area regarding biomarkers. In the future, a larger dataset with more samples may lead to better results, even without any modification to the code. 
+</p>
+
+<p style="text-align: center">
+Inversely, the other datasets did not have this problem. The highest-performing datasets in terms of accuracy were the HtSeq and Combined dataset, with perfect accuracies in nearly every model in all the cross validation folds. The miRNA dataset had relatively similar, but slightly lower accuracies around 99%. Given this performance, there is potential for all of the genes that have not been determined as biomarkers for UCEC or CESC to have some sort of impact on the illnesses. The most prominent in terms of future research would be hsa-mir-224, ENSG00000269899.1, ENSG00000274501.1, ENSG00000215267.7, ENSG00000215030.5, ENSG00000225131.2, and ENSG00000128228.4 due to their high SHAP values.
+</p>
+		
     </section>
+
+	  
 
     <footer>
       <p style="text-align: center">Contributed by</p>
