@@ -179,9 +179,9 @@ Cervical cancer (CESC) and endometrial uterine cancer (UCEC) are two cancers tha
         >
       </p>
 
-      <h2 id="data" style="text-align: center">Dataset</h2>
+      <h2 id="data" style="text-align: center">Datasets</h2>
       <p style="text-align: center">
-	Three types of data were used in this study. Gene expression data, copy number alteration data (CNA), & microRNA (miRNA) data, were all sourced via the XenaBrowser, which collected the data from The Cancer Genome Atlas (TCGA) that was published in 2019. The gene expression data was in the form of high-throughput sequencing data, or Htseq. There were 892 samples and 60483 features. The features in this dataset represented the coding, non-coding, and pseudogenes. The CNA data was in the form of binary GISTIC values where ‘-1’ represented significant evidence of a copy number deletion, ‘0’ represented no evidence of a copy number alteration, and ‘1’ represented significant evidence of a copy number amplification. There were 845 samples and 19729 columns. The columns represented the number of only protein-coding genes that we have in our genome as humans. The miRNA values were quantified by signal intensity of the stem loop expression. There were 887 samples and 1881 columns. The miRNA dataset was quantified by the signal intensity of miRNA only, with no other non-coding genes. Finally, the last dataset consisted of the ‘combined’ data that existed in all three categories. There were a total of 824 samples and 82093 concatenated features of all datasets in this final dataset. 
+	Three types of data were used in this study. Gene expression data, copy number alteration data (CNA), & microRNA (miRNA) data, were all sourced via the XenaBrowser, which collected the data from The Cancer Genome Atlas (TCGA) that was published in 2019 [33]. The gene expression data was in the form of high-throughput sequencing data, or Htseq [18]. There were 892 samples and 60483 features. The features in this dataset represented the coding, non-coding, and pseudogenes. The CNA data was in the form of binary GISTIC values where ‘-1’ represented significant evidence of a copy number deletion, ‘0’ represented no evidence of a copy number alteration, and ‘1’ represented significant evidence of a copy number amplification. There were 845 samples and 19729 columns. The columns represented the number of only protein-coding genes that we have in our genome as humans. The miRNA values were quantified by signal intensity of the stem loop expression. There were 887 samples and 1881 columns. The miRNA dataset was quantified by the signal intensity of miRNA only, with no other non-coding genes. Finally, the last dataset consisted of the ‘combined’ data that existed in all three categories. There were a total of 824 samples and 82093 concatenated features of all datasets in this final dataset. 
       </p>
 
       <h2 id="met" style="text-align: center">Methodology</h2>
@@ -192,49 +192,19 @@ To start, each of the features were required to be standardized in order for the
 Another control for overfitting was cross validation. In this study, a ten-fold cross validation was employed. Ten fold cross validation is a resampling method that takes ten different splits of the training data and testing data. The data is split into ten equal groups, or folds, where each fold takes a turn of being the one testing data fold, while the other nine folds are used as the training data. This is repeated until every fold has had an opportunity to be used as the sole testing data fold. The model is evaluated for each of the ten splits and the final accuracy is the average accuracy of all of the splits. This was repeated for each algorithm in the study, which are listed below. 
       </p>
 
-      <h2 id="imp" style="text-align: center">Implementation</h2>
-      <p style="text-align: center">
-        insert implementation
-      </p>
-	  <h4  style="text-align: center">A. Boruta Feature selection Algorithm:</h4>
-      <p style="text-align: center">
-        asdfasfasdfas
-      </p>
-	  <h4  style="text-align: center">B. Normalization:</h4>
-      <p style="text-align: center">
-       asdfadsfasdfasd
-	      <br><b>Equation:</b>
-<p>
-	<p  style="text-align: center">Z = (x-mean)/ (standard deviation).</p>
-
-<p  style="text-align: center">• Z is the data point's Normalized value.</p>
-<p  style="text-align: center">• x = the original value of the data point</p>
-<p  style="text-align: center">• mean = the mean of the dataset</p>
-<p  style="text-align: center">• standard deviation = the standard deviation of
-the dataset.</p>
-</p>
-      </p>
-	  
-	  <h4  style="text-align: center">C. Merging of Datasets:</h4>
-      <p style="text-align: center">
-        merge asfasfasdf
-      </p>
-	  <h4  style="text-align: center">D. Machine Learning Analysis:</h4>
-      <p style="text-align: center">
-        asdfasdf
-	      <br>
-
-Flow Chart of project:
-      </p>
-	  <div style="display: flex; justify-content: center;"><img src="imp.jpg" alt="#img"/></div>
-	  
-      
 
       <h2 id="res" style="text-align: center">Results</h2>
       <p style="text-align: center">
-        asdfasdf
+Each dataset was fit to the models with the stratified training set and evaluated using the testing set. The accuracies of each fold in the 10 fold cross validation were recorded and evaluated. By looking at the average accuracies for the ten folds, it was clear to see the overall effectiveness of the algorithm in predicting cancer types. For the HtSeq dataset, all algorithms performed either with perfect accuracy or near perfect accuracy. The classification algorithms in the GISTIC dataset had average accuracies in the 70s, with some dropping all the way to the high 60s. The miRNA dataset had average accuracies around the mid 90s for all classification algorithms. Finally, the Combined dataset was similar to the HtSeq dataset in that it had near perfect accuracy. 
       </p>
-
+		
+      <p style="text-align: center">
+By looking at the boxplots, it was clear to see the underperforming algorithms. Though all of the classification models for the HtSeq and Combined datasets performed at around the same level, the miRNA and GISTIC datasets had underperformers. For the miRNA dataset, the Naive Bayes (NB) had a  median accuracy of about 0.85, while several others were performing at least in the 90s. For this reason, it was determined that the value would be omitted for the remainder of the study. For the GISTIC dataset, the underperformer was the Passive Aggressive Classifier, or PAC. For almost all of the classification tasks, the model performed under 50% accuracy, which would be worse than even just random guessing. 
+      </p>
+		
+      <p style="text-align: center">
+Because of the variation in accuracies in the GISTIC and miRNA datasets, only the top performer was chosen to be analyzed for feature importance for the remainder of the study. On the other hand, because of the consistency in accuracy for the HtSeq and Combined datasets, it was determined that the feature importance would be decided by taking the average feature importance values for all of the classification algorithms.       </p>
+		
       <p style="text-align: center">
         <img src="res1.png"alt="res 1" />
       </p>
