@@ -3,11 +3,14 @@ Capstone Report for MS Data Science & Artificial Intelligence
 https://gaf17.github.io/
 
 Discovered potential biomarkers for Uterine and Cervical Cancers using classification algorithms and feature importance via SHAP
-
+ 
 Discovering Potential Biomarkers for Uterine and Cervical Cancers with Machine Learning
+
 Advisor: Dr. Giri Narasimhan
 Mentor: Dr. Ananda Mondal
+
 Abstract
+
 Genetic information holds the power to give insight into the human condition- even revealing potential for illness in the future. Oncogenes, or cancer-causing genes, and tumor suppressing genes have been found to play a major role in the development of cancer. Though the scientific and medical communities are aware of several biomarkers for cervical and uterine cancers, this does not indicate the impossibility of others existing. In this study, three datasets of copy number alterations (CNA), gene expression, and microRNA (miRNA) were used, as well as one combined dataset consisting of overlapping participants in all three datasets. These data were used to find previously discovered biomarkers as well as new potential biomarkers via the feature importance of several different types of classification models. The important features were determined by SHapley Additive exPlanations, or SHAP values. The values were indicative of the overall impact of each feature for the model. Overall, it was found that among the three datasets, the most promising evidence was found in that of the miRNA, HtSeq, and Combined datasets. hsa-mir-224, ENSG00000269899.1, ENSG00000274501.1, ENSG00000215267.7, ENSG00000215030.5, ENSG00000225131.2, and ENSG00000128228.4 were found as potential candidates for biomarkers. While these are currently biomarkers for either other cancers or no cancers at all, further research may be able to reveal their impact on the cancers evaluated in this study, uterine and cervical.
 
 Introduction
