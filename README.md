@@ -1,8 +1,8 @@
+Discovered potential biomarkers for Uterine and Cervical Cancers using classification algorithms and feature importance via SHAP
+
 Capstone Report for MS Data Science & Artificial Intelligence
 
 https://gaf17.github.io/
-
-Discovered potential biomarkers for Uterine and Cervical Cancers using classification algorithms and feature importance via SHAP
  
 Discovering Potential Biomarkers for Uterine and Cervical Cancers with Machine Learning
 
